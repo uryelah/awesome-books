@@ -41,7 +41,30 @@ const bookPartial = (book) => (`
 `);
 
 const bookList = document.getElementById('booksList');
+const addBookForm = document.getElementById('addBookForm');
 
-bookCollection.addBook({ title: '100 years of solitude', author: 'Juan' });
+const addBookToList = ({title, author}) => {
+  bookCollection.addBook({ title, author });
+  clearBooks();
+  renderBooks();
+}
 
-bookCollection.books.forEach(book => bookList.innerHTML += bookPartial(book));
+const renderBooks = () => {
+  bookCollection.books.forEach(book => bookList.innerHTML += bookPartial(book));
+}
+
+const clearBooks = () => {
+  bookList.innerHTML = '';
+}
+
+addBookForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const title = e.target[0].value;
+  const author = e.target[1].value;
+
+  addBookToList({ title, author });
+})
+
+window.onload = () => {
+  renderBooks();
+}
