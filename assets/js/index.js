@@ -72,8 +72,27 @@ addBookForm.addEventListener('submit', e => {
   const author = e.target[1].value;
 
   addBookToList({ title, author });
+  setBooksInStorage();
 })
 
+// Data persistence related code
+
+const getBooksFromStorage = () => {
+  return localStorage.getItem('awesome_books');
+}
+
+const setBooksInStorage = () => {
+  localStorage.setItem('awesome_books', JSON.stringify(bookCollection.books.map(book => ({title: book.title, author: book.author}))))
+}
+
 window.onload = () => {
+  const storedBooks = JSON.parse(getBooksFromStorage());
+
+  if (storedBooks) {
+    storedBooks.forEach(book => {
+      bookCollection.addBook(book);
+    })
+  }
+
   renderBooks();
 }
