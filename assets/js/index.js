@@ -1,7 +1,8 @@
 // Classes definition and application logic
 
 class Book {
-  constructor({ title, author }) {
+  constructor({ id, title, author }) {
+    this.id = id;
     this.title = title;
     this.author = author;
   }
@@ -10,21 +11,17 @@ class Book {
 class Collection {
   constructor() {
     this.books = [];
+    this.nextId = 0;
   }
 
   addBook(bookData) {
-    const newBook = new Book(bookData);
+    const newBook = new Book({...bookData, id: this.nextId});
     this.books.push(newBook);
+    this.nextId += 1;
   }
 
   removeBook(bookId) {
-    this.filter = this.books.filter((book) => {
-      if (book.id !== bookId) {
-        return true;
-      }
-
-      return false;
-    })
+    this.books = this.books.filter((book) => book.id !== Number.parseInt(bookId, 10));
   }
 }
 
@@ -36,6 +33,7 @@ const bookPartial = (book) => (`
 <article id="book-${book.id}">
   <h4>${book.title}</h4>
   <p>${book.author}</p>
+  <button class="removeBookButton" data-id="${book.id}">Remove</button>
 </article>
 <hr/>
 `);
@@ -47,6 +45,10 @@ const addBookToList = ({title, author}) => {
   bookCollection.addBook({ title, author });
   clearBooks();
   renderBooks();
+
+  [...document.getElementsByClassName('removeBookButton')].forEach(button => {
+    button.addEventListener('click', e => removeBook(button.dataset.id))
+  })
 }
 
 const renderBooks = () => {
@@ -55,6 +57,13 @@ const renderBooks = () => {
 
 const clearBooks = () => {
   bookList.innerHTML = '';
+}
+
+const removeBook = (id) => {
+  bookCollection.removeBook(id);
+  clearBooks();
+  console.log(bookCollection.books)
+  renderBooks();
 }
 
 addBookForm.addEventListener('submit', e => {
