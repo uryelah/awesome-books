@@ -29,6 +29,7 @@ section {
 }
 
 .nav {
+  position: relative;
   top: 5px;
 }
 
@@ -70,6 +71,13 @@ section {
 
 .navButton:hover {
   color: #ff1778;
+}
+
+.date {
+  bottom: -22px;
+  font-size: 0.85rem;
+  position: absolute;
+  right: 0;
 }
 
 .logo.title {

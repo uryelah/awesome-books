@@ -40,6 +40,15 @@ const bookList = document.getElementById('booksList');
 const addBookForm = document.getElementById('addBookForm');
 const pages = document.getElementsByClassName('page');
 const navToggles = document.getElementsByClassName('navButton');
+const dateContainer = document.getElementById('date');
+
+const addDate = () => {
+  setInterval(() => {
+    const now = new Date(Date.now());
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hours: 'numeric' };
+    dateContainer.innerText = `${now.toLocaleString('en-US', options)} - ${now.toLocaleTimeString().toLowerCase()}`;
+  }, 1000);
+}
 
 const addDeleteEvents = () => {
   [...document.getElementsByClassName('removeBookButton')].forEach(button => {
@@ -122,4 +131,6 @@ window.onload = () => {
 
   renderBooks();
   addDeleteEvents();
+
+  addDate();
 }
