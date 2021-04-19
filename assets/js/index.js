@@ -81,11 +81,19 @@ addBookForm.addEventListener('submit', e => {
 
 [...navToggles].forEach(tab => {
   tab.addEventListener('click', () => {
+    [...navToggles].forEach(t => {
+      if (t.dataset.tab === tab.dataset.tab) {
+        t.classList.add('selected');
+      } else {
+        t.classList.remove('selected');
+      }
+    });
+
     [...pages].forEach(page => {
       if (page.id === tab.dataset.tab) {
-        page.classList.remove('hidden')
+        page.classList.remove('hidden');
       } else {
-        page.classList.add('hidden')
+        page.classList.add('hidden');
       }
     })
   })

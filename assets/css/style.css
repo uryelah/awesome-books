@@ -12,7 +12,7 @@ body, .button {
 }
 
 section {
-  height: calc(100vh - 175px);
+  min-height: calc(100vh - 225px);
 }
 
 .nav, .footer {
@@ -87,6 +87,10 @@ section {
   margin: 0 auto;
   text-shadow: 3px 3px #ff1778, -1px 1px #ff1778, 1px -1px #ff1778, 0 -1px #ff1778, -1px 0 #ff1778, 0 1px #ff1778, 1px 0 #ff1778;
   width: max-content;
+}
+
+.page {
+  margin-top: 50px;
 }
 
 .books {
@@ -191,4 +195,9 @@ section {
 
 .hidden {
   display: none;
+}
+
+.selected {
+  color: #ff1778;
+  font-weight: 700;
 }
