@@ -30,12 +30,10 @@ const bookCollection = new Collection();
 // User Interaction and DOM related code
 
 const bookPartial = (book) => (`
-<article id="book-${book.id}">
-  <h4>${book.title}</h4>
-  <p>${book.author}</p>
+<article class="book" id="book-${book.id}">
+  <span>"${book.title}" by ${book.author}</span>
   <button class="removeBookButton" data-id="${book.id}">Remove</button>
 </article>
-<hr/>
 `);
 
 const bookList = document.getElementById('booksList');

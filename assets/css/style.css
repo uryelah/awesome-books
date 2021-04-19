@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  background-color: #eeedf5;
+  color: #4c1b5a;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-weight: 700;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.books {
+  border: 3px solid #d3a6e0;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 0 #c496d1, 4px 4px 9px 4px #eae2ee;
+  font-size: 1.25rem;
+  margin: 25px auto;
+  max-width: 670px;
+  min-height: 40px;
+  width: 100%;
+}
+
+.book {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  font-weight: 600;
+  height: 40px;
+  justify-content: space-between;
+  padding: 8px 25px 0 10px;
+  width: 100%;
+}
+
+.book:nth-child(odd) {
+  background-color: #deb0ec;
+}
+
+.removeBookButton {
+  background-color: #fff;
+  border: none;
+  box-shadow: -3px -3px 0 0 #c496d1, -3px 3px 0 0 #c496d1, 3px -3px 0 0 #c496d1, 4px 4px 0 4px #c496d1;
+  color: #4c1b5a; 
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: max-content;
+  padding: 0 5px;
+}
+
+.removeBookButton:hover {
+  background-color: #deb0ec;
+}
+
+.divider {
+  border: 2px solid #c496d1;
+  max-width: 160px;
+  width: 25%;
+}
