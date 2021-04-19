@@ -38,6 +38,8 @@ const bookPartial = (book) => (`
 
 const bookList = document.getElementById('booksList');
 const addBookForm = document.getElementById('addBookForm');
+const pages = document.getElementsByClassName('page');
+const navToggles = document.getElementsByClassName('navButton');
 
 const addDeleteEvents = () => {
   [...document.getElementsByClassName('removeBookButton')].forEach(button => {
@@ -75,7 +77,19 @@ addBookForm.addEventListener('submit', e => {
 
   addBookToList({ title, author });
   setBooksInStorage();
-})
+});
+
+[...navToggles].forEach(tab => {
+  tab.addEventListener('click', () => {
+    [...pages].forEach(page => {
+      if (page.id === tab.dataset.tab) {
+        page.classList.remove('hidden')
+      } else {
+        page.classList.add('hidden')
+      }
+    })
+  })
+});
 
 // Data persistence related code
 

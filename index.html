@@ -15,21 +15,24 @@
       <li class="title logo">Awesome Books</li>
       <li>
         <ul>
-          <li data-tab="booksList" class="navButton">List</li>
+          <li data-tab="home" class="navButton">List</li>
           <li data-tab="addBook" class="navButton">Add new</li>
           <li data-tab="contact" class="navButton">Contact</li>
         </ul>
       </li>
     </ul>
   </nav>
-  <section class="books" id="booksList">
+  <section class="page" id="home">
     <h1 class="title">All awesome books</h1>
+    <div class="books" id="booksList">
+
+    </div>
 
 <!--
   Books go here
 -->
   </section>
-  <section class="hidden" id="addBook">
+  <section class="hidden page" id="addBook">
     <h1 class="title">Add a new book</h1>
     <form class="form" id="addBookForm">
       <div class="formContent">
@@ -39,7 +42,7 @@
       </div>
     </form>
   </section>
-  <section class="hidden" id="contact">
+  <section class="hidden page" id="contact">
     <h1>Contact Information</h1>
     <p>Do you have any questions or just want to say "Hi"?</p>
     <p>Reach out and let's have a vitual coffee!</p>
