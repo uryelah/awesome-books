@@ -10,21 +10,49 @@
 </head>
 
 <body>
-  <h1 class="title">All awesome books</h1>
+  <nav>
+    <ul>
+      <li>Awesome Books</li>
+      <li>
+        <ul>
+          <li>List</li>
+          <li>Add new</li>
+          <li>Contact</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
   <section class="books" id="booksList">
+    <h1 class="title">All awesome books</h1>
+
 <!--
   Books go here
 -->
   </section>
+  <section class="hidden" id="addBook">
+    <h1 class="title">Add a new book</h1>
+    <form class="form" id="addBookForm">
+      <div class="formContent">
+        <input required placeholder="Title" type="text" name="bookTitle" id="bookTitle">
+        <input required placeholder="Author" type="text" name="bookAuthor" id="bookAuthor">
+        <button class="button" id="addBook">Add</button>
+      </div>
+    </form>
+  </section>
+  <section class="hidden" id="contact">
+    <h1>Contact Information</h1>
+    <p>Do you have any questions or just want to say "Hi"?</p>
+    <p>Reach out and let's have a vitual coffee!</p>
+    <ul>
+      <li>Our e-mail: mail@mail.com</li>
+      <li>Our phone number: +01 42667489</li>
+      <li>Our address: Sesame st. 21, 420 Cleaveland, UZ</li>
+    </ul>
+  </section> 
   <hr class="divider"/>
-  <form class="form" id="addBookForm">
-    <h2 class="title">Add a new book</h2>
-    <div class="formContent">
-      <input required placeholder="Title" type="text" name="bookTitle" id="bookTitle">
-      <input required placeholder="Author" type="text" name="bookAuthor" id="bookAuthor">
-      <button class="button" id="addBook">Add</button>
-    </div>
-  </form>
+  <footer>
+    © Sarah - 2021 
+  </footer>
   <script src="./assets/js/index.js"></script>
 </body>
 
