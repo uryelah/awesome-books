@@ -10,14 +10,14 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="nav">
     <ul>
-      <li>Awesome Books</li>
+      <li class="title logo">Awesome Books</li>
       <li>
         <ul>
-          <li>List</li>
-          <li>Add new</li>
-          <li>Contact</li>
+          <li data-tab="booksList" class="navButton">List</li>
+          <li data-tab="addBook" class="navButton">Add new</li>
+          <li data-tab="contact" class="navButton">Contact</li>
         </ul>
       </li>
     </ul>
@@ -50,8 +50,8 @@
     </ul>
   </section> 
   <hr class="divider"/>
-  <footer>
-    © Sarah - 2021 
+  <footer class="footer">
+    <ul><li>© Sarah - 2021 </li></ul>
   </footer>
   <script src="./assets/js/index.js"></script>
 </body>

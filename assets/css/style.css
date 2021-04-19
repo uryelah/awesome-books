@@ -5,11 +5,79 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   padding-top: 40px;
-  min-height: 100vh;
 }
 
 body, .button {
   color: #F37335; 
+}
+
+section {
+  height: calc(100vh - 175px);
+}
+
+.nav, .footer {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid hsl(20, 89%, 58%);
+  box-sizing: border-box;
+  display: flex;
+  height: 42px;
+  left: 7px;
+  margin: 0 auto;
+  position: absolute;
+  right: 7px;
+}
+
+.nav {
+  top: 5px;
+}
+
+.footer {
+  left: 0;
+  padding: 0 10px;
+  position: relative;
+  right: 0;
+}
+
+.nav ul, .footer ul {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav > ul, .footer > ul {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav ul ul li {
+  padding: 0 10px;
+}
+
+.nav ul ul li+li {
+  border-left: 2px solid #F37335;
+}
+
+.navButton {
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.navButton:hover {
+  color: #ff1778;
+}
+
+.logo.title {
+  align-self: center;
+  color: #FDC830;
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 10px;
 }
 
 .title {
@@ -119,4 +187,8 @@ body, .button {
 
 .formContent input:focus, input:valid {
   color: #ff1778;
+}
+
+.hidden {
+  display: none;
 }
