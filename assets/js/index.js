@@ -41,14 +41,17 @@ const bookPartial = (book) => (`
 const bookList = document.getElementById('booksList');
 const addBookForm = document.getElementById('addBookForm');
 
+const addDeleteEvents = () => {
+  [...document.getElementsByClassName('removeBookButton')].forEach(button => {
+    button.addEventListener('click', e => removeBook(button.dataset.id))
+  })
+};
+
 const addBookToList = ({title, author}) => {
   bookCollection.addBook({ title, author });
   clearBooks();
   renderBooks();
-
-  [...document.getElementsByClassName('removeBookButton')].forEach(button => {
-    button.addEventListener('click', e => removeBook(button.dataset.id))
-  })
+  addDeleteEvents();
 }
 
 const renderBooks = () => {
@@ -62,8 +65,9 @@ const clearBooks = () => {
 const removeBook = (id) => {
   bookCollection.removeBook(id);
   clearBooks();
-  console.log(bookCollection.books)
   renderBooks();
+  addDeleteEvents();
+  setBooksInStorage();
 }
 
 addBookForm.addEventListener('submit', e => {
@@ -82,7 +86,8 @@ const getBooksFromStorage = () => {
 }
 
 const setBooksInStorage = () => {
-  localStorage.setItem('awesome_books', JSON.stringify(bookCollection.books.map(book => ({title: book.title, author: book.author}))))
+  const parsedBooks = bookCollection.books.map(book => ({title: book.title, author: book.author}))
+  localStorage.setItem('awesome_books', JSON.stringify(parsedBooks));
 }
 
 window.onload = () => {
@@ -92,7 +97,9 @@ window.onload = () => {
     storedBooks.forEach(book => {
       bookCollection.addBook(book);
     })
+
   }
 
   renderBooks();
+  addDeleteEvents();
 }
