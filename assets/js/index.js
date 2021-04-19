@@ -32,7 +32,7 @@ const bookCollection = new Collection();
 const bookPartial = (book) => (`
 <article class="book" id="book-${book.id}">
   <span>"${book.title}" by ${book.author}</span>
-  <button class="removeBookButton" data-id="${book.id}">Remove</button>
+  <button class="button removeBookButton" data-id="${book.id}">Remove</button>
 </article>
 `);
 

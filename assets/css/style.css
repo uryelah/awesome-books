@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 body {
-  background-color: #eeedf5;
+  background-color: #ece9f3;
   color: #4c1b5a;
   font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
 }
 
 .title {
@@ -38,7 +39,7 @@ body {
   background-color: #deb0ec;
 }
 
-.removeBookButton {
+.button {
   background-color: #fff;
   border: none;
   box-shadow: -3px -3px 0 0 #c496d1, -3px 3px 0 0 #c496d1, 3px -3px 0 0 #c496d1, 4px 4px 0 4px #c496d1;
@@ -49,12 +50,44 @@ body {
   padding: 0 5px;
 }
 
-.removeBookButton:hover {
+.button:hover {
   background-color: #deb0ec;
 }
 
 .divider {
   border: 2px solid #c496d1;
+  margin-top: 30px;
   max-width: 160px;
   width: 25%;
+}
+
+.form {
+  margin: 25px auto;
+  max-width: 335px;
+  width: 50%;
+}
+
+.formContent {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContent * {
+  height: 30px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.formContent button {
+  width: 70px;
+}
+
+.formContent input {
+  border: 3px solid #d3a6e0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  height: 40px;
+  padding: 5px 10px;
 }
