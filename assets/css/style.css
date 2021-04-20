@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
 
 body {
-  background:#f6ffa3;
+  background: #f6ffa3;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   padding-top: 40px;
   min-height: 100vh;
 }
 
-body, .button {
-  color: #F37335; 
+body,
+.button {
+  color: #f37335;
 }
 
 .title {
-  color: #fff; 
+  color: #fff;
   font-size: 2.25rem;
   font-weight: 900;
   margin: 0 auto;
@@ -24,7 +25,7 @@ body, .button {
 .books {
   background-color: #fff;
   border: 1px solid #fff;
-  box-shadow: 3px 3px 0 1px #F37335, 0 0 0 1px #F37335;
+  box-shadow: 3px 3px 0 1px #f37335, 0 0 0 1px #f37335;
   font-size: 1.25rem;
   margin: 25px auto;
   max-width: 670px;
@@ -45,16 +46,16 @@ body, .button {
 }
 
 .book:nth-child(odd) {
-  background-color: #FDC830;
+  background-color: #fdc830;
   color: #fff;
 }
 
 .button {
   background-color: #fff;
   border: none;
-  box-shadow: -1px -1px 0 0 #F37335, -1px 1px 0 0 #F37335, 1px -1px 0 0 #F37335, 2px 2px 0 2px #F37335;
+  box-shadow: -1px -1px 0 0 #f37335, -1px 1px 0 0 #f37335, 1px -1px 0 0 #f37335, 2px 2px 0 2px #f37335;
   color: #fff;
-  text-shadow: 2px 2px #F37335, -1px 1px #F37335, 1px -1px #F37335, 0 -1px #F37335, -1px 0 #F37335, 0 1px #F37335, 1px 0 #F37335;
+  text-shadow: 2px 2px #f37335, -1px 1px #f37335, 1px -1px #f37335, 0 -1px #f37335, -1px 0 #f37335, 0 1px #f37335, 1px 0 #f37335;
   font-size: 1.2rem;
   font-weight: 700;
   height: max-content;
@@ -62,7 +63,7 @@ body, .button {
 }
 
 .button:hover {
-  box-shadow: -1px -1px 0 0 #F37335, -1px 1px 0 0 #F37335, 1px -1px 0 0 #F37335, 1px 1px 0 1px #F37335;
+  box-shadow: -1px -1px 0 0 #f37335, -1px 1px 0 0 #f37335, 1px -1px 0 0 #f37335, 1px 1px 0 1px #f37335;
   transform: translate(2px, 2px);
 }
 
@@ -78,7 +79,7 @@ body, .button {
 }
 
 .divider {
-  border: 1px solid #FDC830;
+  border: 1px solid #fdc830;
   margin-top: 35px;
   max-width: 160px;
   width: 25%;
@@ -108,15 +109,16 @@ body, .button {
 }
 
 .formContent input {
-  border: 1px solid #F37335;
+  border: 1px solid #f37335;
   box-sizing: border-box;
   box-shadow: none;
-  color: #F37335;
+  color: #f37335;
   font-size: 1.2rem;
   height: 40px;
   padding: 5px 10px;
 }
 
-.formContent input:focus, input:valid {
+input:valid,
+.formContent input:focus {
   color: #ff1778;
 }
