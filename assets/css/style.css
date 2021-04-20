@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
 
 body {
-  background:#f6ffa3;
+  background: #f6ffa3;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   padding-top: 40px;
 }
 
-body, .button {
-  color: #F37335; 
+body,
+.button {
+  color: #f37335;
 }
 
 section {
   min-height: calc(100vh - 225px);
 }
 
-.nav, .footer {
+.nav,
+.footer {
   align-items: center;
   background-color: #fff;
   border: 1px solid hsl(20, 89%, 58%);
@@ -39,7 +41,8 @@ section {
   right: 0;
 }
 
-.nav ul, .footer ul {
+.nav ul,
+.footer ul {
   display: flex;
   height: 100%;
   justify-content: space-around;
@@ -48,18 +51,23 @@ section {
   padding: 0;
 }
 
-.nav > ul, .footer > ul {
+.nav > ul,
+.footer > ul {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.content li {
+  list-style: none;
 }
 
 .nav ul ul li {
   padding: 0 10px;
 }
 
-.nav ul ul li+li {
-  border-left: 2px solid #F37335;
+.nav ul ul li + li {
+  border-left: 2px solid #f37335;
 }
 
 .navButton {
@@ -81,14 +89,14 @@ section {
 
 .logo.title {
   align-self: center;
-  color: #FDC830;
+  color: #fdc830;
   font-size: 1rem;
   margin: 0;
   margin-left: 10px;
 }
 
 .title {
-  color: #fff; 
+  color: #fff;
   font-size: 2.25rem;
   font-weight: 900;
   margin: 0 auto;
@@ -103,7 +111,7 @@ section {
 .books {
   background-color: #fff;
   border: 1px solid #fff;
-  box-shadow: 3px 3px 0 1px #F37335, 0 0 0 1px #F37335;
+  box-shadow: 3px 3px 0 1px #f37335, 0 0 0 1px #f37335;
   font-size: 1.25rem;
   margin: 25px auto;
   max-width: 670px;
@@ -124,16 +132,16 @@ section {
 }
 
 .book:nth-child(odd) {
-  background-color: #FDC830;
+  background-color: #fdc830;
   color: #fff;
 }
 
 .button {
   background-color: #fff;
   border: none;
-  box-shadow: -1px -1px 0 0 #F37335, -1px 1px 0 0 #F37335, 1px -1px 0 0 #F37335, 2px 2px 0 2px #F37335;
+  box-shadow: -1px -1px 0 0 #f37335, -1px 1px 0 0 #f37335, 1px -1px 0 0 #f37335, 2px 2px 0 2px #f37335;
   color: #fff;
-  text-shadow: 2px 2px #F37335, -1px 1px #F37335, 1px -1px #F37335, 0 -1px #F37335, -1px 0 #F37335, 0 1px #F37335, 1px 0 #F37335;
+  text-shadow: 2px 2px #f37335, -1px 1px #f37335, 1px -1px #f37335, 0 -1px #f37335, -1px 0 #f37335, 0 1px #f37335, 1px 0 #f37335;
   font-size: 1.2rem;
   font-weight: 700;
   height: max-content;
@@ -141,7 +149,7 @@ section {
 }
 
 .button:hover {
-  box-shadow: -1px -1px 0 0 #F37335, -1px 1px 0 0 #F37335, 1px -1px 0 0 #F37335, 1px 1px 0 1px #F37335;
+  box-shadow: -1px -1px 0 0 #f37335, -1px 1px 0 0 #f37335, 1px -1px 0 0 #f37335, 1px 1px 0 1px #f37335;
   transform: translate(2px, 2px);
 }
 
@@ -157,7 +165,7 @@ section {
 }
 
 .divider {
-  border: 1px solid #FDC830;
+  border: 1px solid #fdc830;
   margin-top: 35px;
   max-width: 160px;
   width: 25%;
@@ -187,21 +195,21 @@ section {
 }
 
 .formContent input {
-  border: 1px solid #F37335;
+  border: 1px solid #f37335;
   box-sizing: border-box;
   box-shadow: none;
-  color: #F37335;
+  color: #f37335;
   font-size: 1.2rem;
   height: 40px;
   padding: 5px 10px;
 }
 
-.formContent input:focus, input:valid {
+input:valid,
+.formContent input:focus {
   color: #ff1778;
 }
 
 .content {
-  align-items: left;
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
@@ -209,7 +217,7 @@ section {
   margin: 0 auto;
   padding: 35px 0;
   width: max-content;
-} 
+}
 
 .content p {
   margin: 0;
@@ -219,12 +227,8 @@ section {
   margin-bottom: 30px;
 }
 
-.content li {
-  list-style: none;
-}
-
-.content li:before {
-  content: "\2022"; 
+.content li::before {
+  content: "\2022";
   color: #ff1778;
   font-size: 2rem;
   font-weight: bold;
