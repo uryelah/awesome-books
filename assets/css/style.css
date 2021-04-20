@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+body {
+  background: #f6ffa3;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 40px;
+}
+
+body,
+.button {
+  color: #f37335;
+}
+
+section {
+  min-height: calc(100vh - 225px);
+}
+
+.nav,
+.footer {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid hsl(20, 89%, 58%);
+  box-sizing: border-box;
+  display: flex;
+  height: 42px;
+  left: 7px;
+  margin: 0 auto;
+  position: absolute;
+  right: 7px;
+}
+
+.nav {
+  top: 5px;
+}
+
+.footer {
+  left: 0;
+  padding: 0 10px;
+  position: relative;
+  right: 0;
+}
+
+.nav ul,
+.footer ul {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav > ul,
+.footer > ul {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content li {
+  list-style: none;
+}
+
+.nav ul ul li {
+  padding: 0 10px;
+}
+
+.nav ul ul li + li {
+  border-left: 2px solid #f37335;
+}
+
+.navButton {
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.navButton:hover {
+  color: #ff1778;
+}
+
+.date {
+  bottom: -22px;
+  font-size: 0.85rem;
+  position: absolute;
+  right: 0;
+}
+
+.logo.title {
+  align-self: center;
+  color: #fdc830;
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.title {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin: 0 auto;
+  text-shadow: 3px 3px #ff1778, -1px 1px #ff1778, 1px -1px #ff1778, 0 -1px #ff1778, -1px 0 #ff1778, 0 1px #ff1778, 1px 0 #ff1778;
+  width: max-content;
+}
+
+.page {
+  margin-top: 50px;
+}
+
+.books {
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 3px 3px 0 1px #f37335, 0 0 0 1px #f37335;
+  font-size: 1.25rem;
+  margin: 25px auto;
+  max-width: 670px;
+  min-height: 40px;
+  width: 100%;
+}
+
+.book {
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #ff1778;
+  display: flex;
+  font-weight: 400;
+  height: 40px;
+  justify-content: space-between;
+  padding: 8px 25px 0 10px;
+  width: 100%;
+}
+
+.book:nth-child(odd) {
+  background-color: #fdc830;
+  color: #fff;
+}
+
+.button {
+  background-color: #fff;
+  border: none;
+  box-shadow: -1px -1px 0 0 #f37335, -1px 1px 0 0 #f37335, 1px -1px 0 0 #f37335, 2px 2px 0 2px #f37335;
+  color: #fff;
+  text-shadow: 2px 2px #f37335, -1px 1px #f37335, 1px -1px #f37335, 0 -1px #f37335, -1px 0 #f37335, 0 1px #f37335, 1px 0 #f37335;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: max-content;
+  padding: 0 5px;
+}
+
+.button:hover {
+  box-shadow: -1px -1px 0 0 #f37335, -1px 1px 0 0 #f37335, 1px -1px 0 0 #f37335, 1px 1px 0 1px #f37335;
+  transform: translate(2px, 2px);
+}
+
+.book:nth-child(even) .button {
+  box-shadow: -1px -1px 0 0 #ff1778, -1px 1px 0 0 #ff1778, 1px -1px 0 0 #ff1778, 2px 2px 0 2px #ff1778;
+  color: #fff;
+  text-shadow: 2px 2px #ff1778, -1px 1px #ff1778, 1px -1px #ff1778, 0 -1px #ff1778, -1px 0 #ff1778, 0 1px #ff1778, 1px 0 #ff1778;
+}
+
+.book:nth-child(even) .button:hover {
+  box-shadow: -1px -1px 0 0 #ff1778, -1px 1px 0 0 #ff1778, 1px -1px 0 0 #ff1778, 1px 1px 0 1px #ff1778;
+  transform: translate(2px, 2px);
+}
+
+.divider {
+  border: 1px solid #fdc830;
+  margin-top: 35px;
+  max-width: 160px;
+  width: 25%;
+}
+
+.form {
+  margin: 25px auto;
+  max-width: 335px;
+  width: 50%;
+}
+
+.formContent {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.formContent * {
+  height: 30px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.formContent button {
+  width: 70px;
+}
+
+.formContent input {
+  border: 1px solid #f37335;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: #f37335;
+  font-size: 1.2rem;
+  height: 40px;
+  padding: 5px 10px;
+}
+
+input:valid,
+.formContent input:focus {
+  color: #ff1778;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 35px 0;
+  width: max-content;
+}
+
+.content p {
+  margin: 0;
+}
+
+.content p + p {
+  margin-bottom: 30px;
+}
+
+.content li::before {
+  content: "\2022";
+  color: #ff1778;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  transform: translateY(4px);
+  width: 0.7em;
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  color: #ff1778;
+  font-weight: 700;
+}
